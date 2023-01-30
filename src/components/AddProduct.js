@@ -16,13 +16,16 @@ const AddProduct = (e) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/products", {
-        name: String(productName),
-        description: String(productDescription),
-        price: Number(productPrice),
-        quantity: Number(productQuantity),
-        image: String(productImage),
-      })
+      .post(
+        "https://product-store-backend-18dcvjucr-sahilpatel495.vercel.app/products",
+        {
+          name: String(productName),
+          description: String(productDescription),
+          price: Number(productPrice),
+          quantity: Number(productQuantity),
+          image: String(productImage),
+        }
+      )
       .then((res) => history("/"));
     history.push("/");
   };

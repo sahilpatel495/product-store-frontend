@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 import Product from "./Product";
 import "./Product.css";
 
-const URL = "http://localhost:5000/products";
+const URL =
+  "https://product-store-backend-18dcvjucr-sahilpatel495.vercel.app/products";
 
 const fetchHandler = async () => {
   return await axios.get(URL).then((res) => res.data);

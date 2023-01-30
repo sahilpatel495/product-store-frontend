@@ -9,7 +9,8 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import axios from "axios";
 
-const URL = "http://localhost:5000/products";
+const URL =
+  "https://product-store-backend-18dcvjucr-sahilpatel495.vercel.app/products";
 
 const fetchHandler = async () => {
   return await axios.get(URL).then((res) => res.data);
